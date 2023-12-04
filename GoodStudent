@@ -1,0 +1,76 @@
+public class GoodStudent{
+    //1)instance variables
+    private String firstName;
+    private String nickname;
+    private String lastName;
+    private int idNumber;
+    double GPA;
+    String csStudent;
+
+    //2) Constructors
+    public GoodStudent(String FirstName, String Nickname, String LastName, int IdNumber, double GPA, String CsStudent) {
+        this.firstName = FirstName;
+        this.nickname = Nickname;
+        this.lastName = LastName;
+        this.idNumber = IdNumber;
+        this.GPA = GPA;
+        this.csStudent = CsStudent;
+
+    }
+
+    // Getters and Setters
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getNickname(){
+        return nickname;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+    public double getGPA(){
+        return GPA;
+    }
+    public int getIDNumber() {
+        return idNumber;
+    }
+    public String getCsStudent(){ return csStudent;}
+    public void setNickname(String myNickname){
+        nickname = myNickname;
+    }
+    public void setGPA(double myGPA){
+        GPA = myGPA;
+    }
+
+
+    
+    //Brain Method
+    public String createID() {
+        String newId = "" + idNumber;
+        String completeId = (firstName.substring(0, 1).concat(lastName)).concat(newId.substring(3, 6));
+
+        return completeId;
+    }
+
+    public double CSGPA() {
+        if (csStudent.equals("Yes")) {
+            GPA = GPA + (GPA * 0.15);
+        }
+        else{
+             GPA = GPA;
+        }
+        return GPA;
+    }
+
+    //3) toString
+    public String toString() {
+        String result = "Your first name is " + firstName +
+                "\nYour last name is " + lastName +
+                "\nYour nickname is " + nickname +
+                "\nYour GPA is " + GPA;
+
+        return result;
+    }
+}
