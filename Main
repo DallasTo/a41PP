@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        GoodStudent AlanTuring = new GoodStudent("Alan", "Big Al", "Turing", 191254, 3.56, "Yes");
+        GoodStudent FlorenceNightingale = new GoodStudent("Florence", "", "Nightingale",182010,3.89,"No");
+        GoodStudent GraceHopper = new GoodStudent ("Grace","Queen Bee", "Hopper",190692, 3.99, "Yes");
+
+
+        System.out.println(AlanTuring.toString() + "\n");
+        FlorenceNightingale.setNickname("Flo-No");
+        FlorenceNightingale.setGPA(3.92);
+        System.out.println("Florence's nickname is " + FlorenceNightingale.getNickname() + " and her GPA is " + FlorenceNightingale.getGPA() + "\n");
+        System.out.println("Grace's first Name is " + GraceHopper.getFirstName() + " and her CS Status is " + GraceHopper.getCsStudent() + "\n");
+        System.out.println(AlanTuring.createID() + "\n");
+        System.out.println(FlorenceNightingale.createID() + "\n");
+        System.out.println(GraceHopper.createID() + "\n");
+        System.out.println(AlanTuring.CSGPA() + "\n");
+        System.out.println(FlorenceNightingale.CSGPA() + "\n");
+        System.out.println(GraceHopper.CSGPA() + "\n");
+
+    }
+}
