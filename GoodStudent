@@ -4,8 +4,8 @@ public class GoodStudent{
     private String nickname;
     private String lastName;
     private int idNumber;
-    double GPA;
-    String csStudent;
+    private double GPA;
+    private String csStudent;
 
     //2) Constructors
     public GoodStudent(String FirstName, String Nickname, String LastName, int IdNumber, double GPA, String CsStudent) {
